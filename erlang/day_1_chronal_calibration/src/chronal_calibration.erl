@@ -11,6 +11,7 @@ total([H|T], Acc) ->
     {Frequency, _} = string:to_integer(H),
     total(T, Acc+Frequency).
 
+%%% ----------------------------------------------------------------------------
 reaches_twice(File) ->
     Tokens = tokenize(File),
     reaches_twice(Tokens, Tokens, 0, []).
@@ -27,8 +28,7 @@ reaches_twice([H|T], Input, Total, Acc) ->
             reaches_twice(T, Input, NewTotal, [NewTotal|Acc])
     end.
 
+%%% ----------------------------------------------------------------------------
 tokenize(File) ->
     {ok, Bin} = file:read_file(File),
     string:tokens(binary_to_list(Bin), "\n").
-
-

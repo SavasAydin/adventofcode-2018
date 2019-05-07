@@ -75,9 +75,13 @@ Here are other examples:
 What is the first frequency your device reaches twice?
 
 Build
------
-    $ rebar3 compile
+=====
+```
+  rebar3 compile
+```
 
 Test
------
-    $ rebar3 eunit
+====
+```
+  rebar3 eunit
+```
